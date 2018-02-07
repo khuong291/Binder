@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1B83F435202B32AE00FEAB21 /* Binder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B83F433202B32AE00FEAB21 /* Binder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B83F43C202B353700FEAB21 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F43B202B353700FEAB21 /* Binder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B83F430202B32AE00FEAB21 /* Binder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Binder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B83F433202B32AE00FEAB21 /* Binder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Binder.h; sourceTree = "<group>"; };
 		1B83F434202B32AE00FEAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B83F43B202B353700FEAB21 /* Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				1B83F433202B32AE00FEAB21 /* Binder.h */,
 				1B83F434202B32AE00FEAB21 /* Info.plist */,
+				1B83F43B202B353700FEAB21 /* Binder.swift */,
 			);
 			path = Binder;
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					1B83F42F202B32AE00FEAB21 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B83F43C202B353700FEAB21 /* Binder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +258,7 @@
 		1B83F439202B32AE00FEAB21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +272,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.kasler.Binder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +281,7 @@
 		1B83F43A202B32AE00FEAB21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
