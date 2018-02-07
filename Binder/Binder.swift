@@ -6,28 +6,28 @@
 //  Copyright © 2018 KhuongPham. All rights reserved.
 //
 
-class Binder<V, T> {
-    var value: V {
+open class Binder<V, T> {
+    open var value: V {
         didSet {
             listener?(value)
         }
     }
     
-    let type: T
+    open let type: T
     
     private var listener: ((V) -> Void)?
     
-    init(value: V, type: T) {
+    public init(value: V, type: T) {
         self.value = value
         self.type = type
     }
     
-    func bind(_ closure: @escaping (V) -> Void) {
+    open func bind(_ closure: @escaping (V) -> Void) {
         closure(value)
         listener = closure
     }
     
-    func remove() {
+    open func remove() {
         listener = nil
     }
 }
