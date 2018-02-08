@@ -6,7 +6,7 @@
 //  Copyright © 2018 KhuongPham. All rights reserved.
 //
 
-public enum LabelBindingType {
+public enum LabelBindingType: Bindable {
     case text
     case font
     case textColor
@@ -14,50 +14,35 @@ public enum LabelBindingType {
     case isEnabled
 }
 
-public func <-><T>(binder: Binder<T, LabelBindingType>, label: UILabel) -> Binder<T, LabelBindingType> {
-    switch binder.type {
-    case .text:
-        binder.bind { value in
-            guard let value = value as? String else {
-                return
-            }
-            label.text = value
-        }
-        
-    case .font:
-        binder.bind { value in
-            guard let value = value as? UIFont else {
-                return
-            }
-            label.font = value
-        }
-        
-    case .textColor:
-        binder.bind { value in
-            guard let value = value as? UIColor else {
-                return
-            }
-            label.textColor = value
-        }
-        
-    case .isUserInteractionEnabled:
-        binder.bind { value in
-            guard let value = value as? Bool else {
-                return
-            }
-            label.isUserInteractionEnabled = value
-        }
-        
-    case .isEnabled:
-        binder.bind { value in
-            guard let value = value as? Bool else {
-                return
-            }
-            label.isEnabled = value
+@discardableResult
+public func <-><V, T>(binder: Binder<V, T>, label: UILabel) -> Binder<V, T> {
+    guard let type = binder.type as? LabelBindingType else {
+        return binder
+    }
+    
+    binder.bind { value in
+        switch type {
+        case .text:
+            label.text = value as? String
+        case .font:
+            label.font = value as? UIFont
+        case .textColor:
+            label.textColor = value as? UIColor
+        case .isUserInteractionEnabled:
+            label.isUserInteractionEnabled = value as! Bool
+        case .isEnabled:
+            label.isEnabled = value as! Bool
         }
     }
     
     return binder
+}
 
+@discardableResult
+public func <-><V, T>(binder: Binder<V, T>, labels: [UILabel]) -> Binder<V, T> {
+    labels.forEach {
+        binder <-> $0
+    }
+    return binder
 }
 

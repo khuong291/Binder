@@ -6,7 +6,7 @@
 //  Copyright © 2018 KhuongPham. All rights reserved.
 //
 
-open class Binder<V, T> {
+open class Binder<V, T> where T: Bindable {
     open var value: V {
         didSet {
             listeners.forEach {
