@@ -9,13 +9,15 @@
 open class Binder<V, T> {
     open var value: V {
         didSet {
-            listener?(value)
+            listeners.forEach {
+                $0?(value)
+            }
         }
     }
     
     open let type: T
     
-    private var listener: ((V) -> Void)?
+    private var listeners: [((V) -> Void)?] = []
     
     public init(value: V, type: T) {
         self.value = value
@@ -24,10 +26,10 @@ open class Binder<V, T> {
     
     open func bind(_ closure: @escaping (V) -> Void) {
         closure(value)
-        listener = closure
+        listeners.append(closure)
     }
     
     open func remove() {
-        listener = nil
+        listeners.removeAll()
     }
 }
