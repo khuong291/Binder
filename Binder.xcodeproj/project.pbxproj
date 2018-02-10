@@ -13,6 +13,7 @@
 		1B83F440202B3B7400FEAB21 /* UILabel+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F43F202B3B7400FEAB21 /* UILabel+Binder.swift */; };
 		1B83F442202B3EBA00FEAB21 /* UIView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F441202B3EBA00FEAB21 /* UIView+Binder.swift */; };
 		1B83F444202C5F8000FEAB21 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F443202C5F8000FEAB21 /* Bindable.swift */; };
+		1B83F46E202F55F800FEAB21 /* UITextField+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83F46D202F55F800FEAB21 /* UITextField+Binder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B83F43F202B3B7400FEAB21 /* UILabel+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Binder.swift"; sourceTree = "<group>"; };
 		1B83F441202B3EBA00FEAB21 /* UIView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Binder.swift"; sourceTree = "<group>"; };
 		1B83F443202C5F8000FEAB21 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		1B83F46D202F55F800FEAB21 /* UITextField+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Binder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1B83F43D202B35C100FEAB21 /* BindOperator.swift */,
 				1B83F43F202B3B7400FEAB21 /* UILabel+Binder.swift */,
 				1B83F441202B3EBA00FEAB21 /* UIView+Binder.swift */,
+				1B83F46D202F55F800FEAB21 /* UITextField+Binder.swift */,
 				1B83F443202C5F8000FEAB21 /* Bindable.swift */,
 			);
 			path = Binder;
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B83F444202C5F8000FEAB21 /* Bindable.swift in Sources */,
+				1B83F46E202F55F800FEAB21 /* UITextField+Binder.swift in Sources */,
 				1B83F43E202B35C100FEAB21 /* BindOperator.swift in Sources */,
 				1B83F440202B3B7400FEAB21 /* UILabel+Binder.swift in Sources */,
 				1B83F442202B3EBA00FEAB21 /* UIView+Binder.swift in Sources */,
