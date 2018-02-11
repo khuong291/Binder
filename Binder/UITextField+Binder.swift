@@ -62,5 +62,3 @@ public func <-><V, T>(binder: Binder<V, T>, textFields: [UITextField]) -> Binder
     }
     return binder
 }
-
-

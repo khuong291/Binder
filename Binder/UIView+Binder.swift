@@ -48,4 +48,3 @@ public func <-><V, T>(binder: Binder<V, T>, views: [UIView]) -> Binder<V, T> {
     }
     return binder
 }
-
