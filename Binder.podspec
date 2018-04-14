@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "A lightweight data binding for components on iOS"
   s.description  = <<-DESC
-                    A lightweight data binding for components on iOS
+                    A lightweight data binding for components on iOS, very lightweight and easy to use.
                    DESC
   s.homepage     = "http://github.com/khuong291/Binder"
   s.license      = { :type => "MIT", :file => "LICENSE" }
