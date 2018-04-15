@@ -49,30 +49,28 @@ carthage update --platform ios
 
 ## Getting started
 
-### Create a Binder object
-
-Your **Binder** can be as simple as this:
+### Create a Binder object:
 
 ```swift
 private let colorBinder: Binder<UIColor, ViewBindingType> = Binder(value: .white, type: .backgroundColor)
 private let textBinder: Binder<String, LabelBindingType> = Binder(value: "Hello", type: .text)
 ```
 
-You can bind many components as you want:
+### You can bind many components as you want:
 
 ```swift
 colorBinder <-> [view1, view2, view3, view4]
 textBinder <-> label1 <-> label2 <-> label3 <-> label4
 ```
 
-Change the binder value:
+### Change the binder value:
 
 ```swit
 colorBinder.value = .green
 textBinder.value = "Green Color"
 ```
 
-If you want to avoid retain cycle, you should remove binder objects:
+### If you want to avoid retain cycle, you should remove binder objects:
 
 ```swift
 deinit {
@@ -81,7 +79,7 @@ deinit {
 }
 ```
 
-And that's it ;)
+### And that's it ;)
 
 
 ## Requirements
