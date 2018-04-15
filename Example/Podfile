@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+
+target 'Example' do
+
+  pod 'Binder', '~> 1.0'
+
+end

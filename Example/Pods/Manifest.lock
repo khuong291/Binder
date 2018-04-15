@@ -1,0 +1,16 @@
+PODS:
+  - Binder (1.0.0)
+
+DEPENDENCIES:
+  - Binder (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Binder
+
+SPEC CHECKSUMS:
+  Binder: f7b3b905762baaa33268ef78fd7133d03e4c5785
+
+PODFILE CHECKSUM: 6f4923f595bfee355037ef8d468db2c60c2c11b8
+
+COCOAPODS: 1.5.0

@@ -10,9 +10,7 @@
 
 ## About
 
-A lightweight data binding for components on iOS, easy to use and does not have retain cycle.
-
-<img src="https://github.com/khuong291/Binder/blob/master/Binder.gif" width="250">
+A lightweight data binding for components on iOS
 
 ## Contributing
 
@@ -34,7 +32,7 @@ pod 'Binder'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
-Add Binder to you `Cartfile`
+Add MagicPresent to you `Cartfile`
 ```sh
 github "khuong291/Binder"
 ```
@@ -46,43 +44,6 @@ carthage update --platform ios
 ### Manually
 1. Download and drop ```/Binder``` folder in your project.  
 2. You're done!
-
-## Getting started
-
-### Create a Binder object
-
-Your **Binder** can be as simple as this:
-
-```swift
-private let colorBinder: Binder<UIColor, ViewBindingType> = Binder(value: .white, type: .backgroundColor)
-private let textBinder: Binder<String, LabelBindingType> = Binder(value: "Hello", type: .text)
-```
-
-You can bind many components as you want:
-
-```swift
-colorBinder <-> [view1, view2, view3, view4]
-textBinder <-> label1 <-> label2 <-> label3 <-> label4
-```
-
-Change the binder value:
-
-```swit
-colorBinder.value = .green
-textBinder.value = "Green Color"
-```
-
-If you want to avoid retain cycle, you should remove binder objects:
-
-```swift
-deinit {
-    colorBinder.remove()
-    textBinder.remove()
-}
-```
-
-And that's it ;)
-
 
 ## Requirements
 

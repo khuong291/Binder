@@ -1,0 +1,6 @@
+module Binder [system] {
+  umbrella header "Binder-umbrella.h"
+
+  export *
+  module * { export * }
+}
